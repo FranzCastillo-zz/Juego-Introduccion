@@ -1,10 +1,10 @@
 #Greenfoot project file
 class.Estrella.image=starfish.png
-class.Pez.image=Pez\ swimming.gif
-editor.fx.0.height=737
-editor.fx.0.width=814
-editor.fx.0.x=232
-editor.fx.0.y=-19
+class.Pez.image=pez.png
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
 height=686
 package.numDependencies=0
 package.numTargets=3
@@ -46,5 +46,5 @@ target3.y=0
 version=3.0.0
 width=876
 world.lastInstantiated=MyWorld
-xPosition=334
-yPosition=0
+xPosition=350
+yPosition=93
