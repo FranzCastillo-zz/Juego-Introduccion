@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.Random;
 
 /**
  * Write a description of class MyWorld here.
@@ -15,9 +16,11 @@ public class MyWorld extends World
      */
     public MyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(416, 608, 1); 
+        // Create a new world with 420x610 cells with a cell size of 1x1 pixels.
+        //super(416, 608, 1);
+        super(420, 610, 1);
         prepare();
+        
     }
 
     /**
@@ -27,8 +30,44 @@ public class MyWorld extends World
     private void prepare()
     {
         Pez pez = new Pez();
-        addObject(pez,181,394);
-        CoralAmarillo coralAmarillo = new CoralAmarillo();
+        addObject(pez,210,580);
+        generarCoral();
+    }
+    
+    private void generarCoral()
+    {
+        Random random = new Random();
+        int limite = 4; //Limite hasta 4 para generar los randoms
+        int cont = 0;
+        int contCorales = 0;
+        int[] arreglo = new int[4];
+        for(int i = 0; i < arreglo.length; i++)
+        {
+            arreglo[i] = 0;
+        }
+        
+        while(cont < 4)
+        {
+            int posicion = random.nextInt(limite);
+            if(arreglo[posicion] == 0 && contCorales < 3)
+            {
+                arreglo[posicion] = 1; // 1 representa un coral
+                contCorales++;
+                cont++;
+            }
+            if(arreglo[posicion] == 0 && contCorales == 3)
+            {
+                arreglo[posicion] = 2; // 2 representa el pbjeto transparente
+                cont++;
+            }
+        }
+        
+        for(int i = 0; i < arreglo.length; i++)
+        {
+            System.out.println(arreglo[i] + "");
+        }
+        
+        /*CoralAmarillo coralAmarillo = new CoralAmarillo();
         addObject(coralAmarillo,57,214);
         CoralMorado coralMorado = new CoralMorado();
         addObject(coralMorado,352,217);
@@ -72,6 +111,6 @@ public class MyWorld extends World
         coralRosa.setLocation(49,255);
         coralMorado.setLocation(336,245);
         coralAmarillo2.setLocation(249,251);
-        coralMorado.setLocation(354,255);
+        coralMorado.setLocation(354,255);*/
     }
 }
