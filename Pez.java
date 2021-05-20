@@ -20,5 +20,14 @@ public class Pez extends Actor
     public void mover()
     {
         move(4);
+        
+        if (Greenfoot.isKeyDown("left"))
+        {
+            turn(-3); //gira 3 a la izquierda
+        }
+        if (Greenfoot.isKeyDown("right"))
+        {
+            turn(3); //gira 3 a la derecha
+        }
     }
 }
