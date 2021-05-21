@@ -12,7 +12,7 @@ public class MyWorld extends World
     private contador score;
     private contador level;
     
-    private int velocidad_coche;
+    private int velocidad_pez;
     private int num_adelantamientos;
     private int num_adelantamientos_nivel;
     private Pez pez;
@@ -30,12 +30,12 @@ public class MyWorld extends World
         
        num_adelantamientos = 0;
        num_adelantamientos_nivel = 4;
-       velocidad_coche = 2;
+       velocidad_pez = 2;
        
        score = new contador("Score: " );
        level = new contador("Level: " );
        level.add(1);
-       pez = new Pez(velocidad_coche);
+       pez = new Pez(velocidad_pez);
        
        addObject(pez, 200, 500);
        addObject(level, 90, 60);
@@ -71,7 +71,7 @@ public class MyWorld extends World
         if(num_adelantamientos == num_adelantamientos_nivel){
             num_adelantamientos = 0;
             num_adelantamientos_nivel = num_adelantamientos_nivel + 2;
-            velocidad_coche++;
+            velocidad_pez++;
             level.add(1);
             pez.aumenta_velocidad();
         }
@@ -84,26 +84,26 @@ public class MyWorld extends World
             int carril = getRandomNumber(0,3);
             
             if(carril == 0){
-                addObject(new CoralAmarillo(velocidad_coche),90, 80);
+                addObject(new CoralAmarillo(velocidad_pez),90, 80);
             }
             else if( carril == 1){
-                addObject(new CoralMorado(velocidad_coche),200, 80);
+                addObject(new CoralMorado(velocidad_pez),200, 80);
             }
             else{
-                addObject(new CoralRosa(velocidad_coche),330, 80);
+                addObject(new CoralRosa(velocidad_pez),330, 80);
             }
             
             carril++;
             carril = carril % 3;
             
             if(carril == 0){
-                addObject(new CoralAmarillo(velocidad_coche),90, 80);
+                addObject(new CoralAmarillo(velocidad_pez),90, 80);
             }
             else if( carril == 1){
-                addObject(new CoralMorado(velocidad_coche),220, 80);
+                addObject(new CoralMorado(velocidad_pez),220, 80);
             }
             else{
-                addObject(new CoralRosa(velocidad_coche),330, 80);
+                addObject(new CoralRosa(velocidad_pez),330, 80);
             }
             
             
