@@ -17,6 +17,7 @@ public class MyWorld extends World
     private int num_adelantamientos_nivel;
     private Pez pez;
     private int num_rivales;
+    GreenfootSound backgroundMusic = new GreenfootSound("fish.wav");
     
     /**
      * Constructor for objects of class MyWorld.
@@ -37,13 +38,15 @@ public class MyWorld extends World
        pez = new Pez(velocidad_coche);
        
        addObject(pez, 200, 500);
-       addObject(level, 205, 90);
-       addObject(score, 205, 60);
+       addObject(level, 90, 60);
+       addObject(score, 90, 30);
+       
     }
     
     public void act(){
         aumentar_dificultad();
         aniadir_rivales();
+        backgroundMusic.playLoop();
     }
     
     public int getRandomNumber(int start,int end){
