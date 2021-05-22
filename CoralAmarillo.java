@@ -25,7 +25,7 @@ public class CoralAmarillo extends Actor
             MyWorld juego = (MyWorld) getWorld();
             juego.removeObject(this);
             juego.aumentar_puntuacion(10);
-            juego.disminuir_num_rivales();
+            juego.disminuir_num_corales();
             juego.aumentar_num_adelantamientos();
         }
     }    

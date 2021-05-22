@@ -16,7 +16,7 @@ public class MyWorld extends World
     private int num_adelantamientos;
     private int num_adelantamientos_nivel;
     private Pez pez;
-    private int num_rivales;
+    private int num_corales;
     GreenfootSound backgroundMusic = new GreenfootSound("fish.wav");
     
     /**
@@ -62,8 +62,8 @@ public class MyWorld extends World
         num_adelantamientos++;
     }
     
-    public void disminuir_num_rivales(){
-        num_rivales--;
+    public void disminuir_num_corales(){
+        num_corales--;
     }
     
     
@@ -79,7 +79,7 @@ public class MyWorld extends World
    
     public void aniadir_rivales(){
         
-        if(num_rivales == 0){
+        if(num_corales == 0){
             
             int carril = getRandomNumber(0,3);
             
@@ -87,10 +87,10 @@ public class MyWorld extends World
                 addObject(new CoralAmarillo(velocidad_pez),90, 80);
             }
             else if( carril == 1){
-                addObject(new CoralMorado(velocidad_pez),200, 80);
+                addObject(new CoralMorado(velocidad_pez),190, 80);
             }
             else{
-                addObject(new CoralRosa(velocidad_pez),330, 80);
+                addObject(new CoralRosa(velocidad_pez),310, 80);
             }
             
             carril++;
@@ -100,14 +100,14 @@ public class MyWorld extends World
                 addObject(new CoralAmarillo(velocidad_pez),90, 80);
             }
             else if( carril == 1){
-                addObject(new CoralMorado(velocidad_pez),220, 80);
+                addObject(new CoralMorado(velocidad_pez),190, 80);
             }
             else{
-                addObject(new CoralRosa(velocidad_pez),330, 80);
+                addObject(new CoralRosa(velocidad_pez),310, 80);
             }
             
             
-            num_rivales = 2;
+            num_corales = 2;
         }
     }
     

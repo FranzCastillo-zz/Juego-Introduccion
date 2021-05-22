@@ -42,6 +42,7 @@ public class Pez extends Actor
     }
     
     public void checkCollision(){
+        try{
         Actor collided = getOneIntersectingObject(CoralAmarillo.class);
         Actor collided2 = getOneIntersectingObject(CoralMorado.class);
         Actor collided3 = getOneIntersectingObject(CoralRosa.class);
@@ -63,6 +64,9 @@ public class Pez extends Actor
           getWorld().removeObject(this);
           Greenfoot.stop();
         }
+    }
+    catch(Exception e){
+    }
     }
     
     public void aumenta_velocidad(){
