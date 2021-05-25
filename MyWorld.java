@@ -87,7 +87,7 @@ public class MyWorld extends World
                 addObject(new CoralAmarillo(velocidad_pez),90, 80);
             }
             else if( carril == 1){
-                addObject(new CoralMorado(velocidad_pez),190, 80);
+                addObject(new CoralMorado(velocidad_pez),195, 80);
             }
             else{
                 addObject(new CoralRosa(velocidad_pez),310, 80);
@@ -100,7 +100,7 @@ public class MyWorld extends World
                 addObject(new CoralAmarillo(velocidad_pez),90, 80);
             }
             else if( carril == 1){
-                addObject(new CoralMorado(velocidad_pez),190, 80);
+                addObject(new CoralMorado(velocidad_pez),195, 80);
             }
             else{
                 addObject(new CoralRosa(velocidad_pez),310, 80);
