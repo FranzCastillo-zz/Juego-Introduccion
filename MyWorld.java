@@ -9,7 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class MyWorld extends World
 {
-
     private contador score;
     private contador level;
     private int nivelcont;
@@ -18,7 +17,7 @@ public class MyWorld extends World
     private int num_adelantamientos_nivel;
     private Pez pez;
     private int num_corales;
-    GreenfootSound backgroundMusic = new GreenfootSound("fish.wav");
+    public GreenfootSound backgroundMusic1 = new GreenfootSound("levels.wav");
     
     /**
      * Constructor for objects of class MyWorld.
@@ -48,7 +47,7 @@ public class MyWorld extends World
     public void act(){
         aumentar_dificultad();
         aniadir_rivales();
-        backgroundMusic.playLoop();
+        backgroundMusic1.playLoop();
     }
     
     public int getRandomNumber(int start,int end){
@@ -68,7 +67,6 @@ public class MyWorld extends World
         num_corales--;
     }
     
-    
     public void aumentar_dificultad(){
         if(num_adelantamientos == num_adelantamientos_nivel){
             num_adelantamientos = 0;
@@ -83,7 +81,7 @@ public class MyWorld extends World
     public void aniadir_rivales(){
         
         if(num_corales == 0){
-            if(nivelcont<=5)
+            if(nivelcont<=4)
             {
                 
                 int carril = getRandomNumber(0,3);
@@ -114,7 +112,7 @@ public class MyWorld extends World
                 
                 num_corales = 2;
             }
-            else
+            else if(nivelcont>=4 && nivelcont<8)
             {
                 int carril = getRandomNumber(0,3);
                 
@@ -139,6 +137,35 @@ public class MyWorld extends World
                 }
                 else{
                     addObject(new Piraña(velocidad_pez),310, 80);
+                }
+                
+                
+                num_corales = 2;
+            }
+            else{
+                int carril = getRandomNumber(0,3);
+                
+                if(carril == 0){
+                    addObject(new Basura(velocidad_pez),90, 80);
+                }
+                else if( carril == 1){
+                    addObject(new Basura(velocidad_pez),195, 80);
+                }
+                else{
+                    addObject(new Basura(velocidad_pez),310, 80);
+                }
+                
+                carril++;
+                carril = carril % 3;
+                
+                if(carril == 0){
+                    addObject(new Basura(velocidad_pez),90, 80);
+                }
+                else if( carril == 1){
+                    addObject(new Basura(velocidad_pez),195, 80);
+                }
+                else{
+                    addObject(new Basura(velocidad_pez),310, 80);
                 }
                 
                 

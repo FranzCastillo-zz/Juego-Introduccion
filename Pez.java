@@ -6,10 +6,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
+
 public class Pez extends Actor
 {
     private int velocidad;
-    
+    boolean bandera=false;
+    GreenfootSound deathsound = new GreenfootSound("dead.wav");
     public Pez(int v){
         velocidad = v;
     }
@@ -43,10 +45,12 @@ public class Pez extends Actor
     
     public void checkCollision(){
         try{
+            
         Actor collided = getOneIntersectingObject(CoralAmarillo.class);
         Actor collided2 = getOneIntersectingObject(CoralMorado.class);
         Actor collided3 = getOneIntersectingObject(CoralRosa.class);
         Actor collided4 = getOneIntersectingObject(Piraña.class);
+        Actor collided5 = getOneIntersectingObject(Basura.class);
         if (collided != null)
         {
           getWorld().removeObject(collided);
@@ -66,6 +70,12 @@ public class Pez extends Actor
           Greenfoot.stop();
         }
         if (collided4 != null)
+        {
+          getWorld().removeObject(collided);
+          getWorld().removeObject(this);
+          Greenfoot.stop();
+        }
+        if (collided5 != null)
         {
           getWorld().removeObject(collided);
           getWorld().removeObject(this);
