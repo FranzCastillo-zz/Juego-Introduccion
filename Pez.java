@@ -46,6 +46,7 @@ public class Pez extends Actor
         Actor collided = getOneIntersectingObject(CoralAmarillo.class);
         Actor collided2 = getOneIntersectingObject(CoralMorado.class);
         Actor collided3 = getOneIntersectingObject(CoralRosa.class);
+        Actor collided4 = getOneIntersectingObject(Piraña.class);
         if (collided != null)
         {
           getWorld().removeObject(collided);
@@ -59,6 +60,12 @@ public class Pez extends Actor
           Greenfoot.stop();
         }
         if (collided3 != null)
+        {
+          getWorld().removeObject(collided);
+          getWorld().removeObject(this);
+          Greenfoot.stop();
+        }
+        if (collided4 != null)
         {
           getWorld().removeObject(collided);
           getWorld().removeObject(this);
