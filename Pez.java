@@ -1,8 +1,20 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Protagonista: Pez.
+ * Juego Fish Tales.
+ * PROTAGONISTA: Pez
+ *
+ * @version: 2.0
  * 
+ * @autores:
+ * José Pablo Kiesling Lange - 21581
+ * Fernanda Esquivel de Leon - 21542
+ * Francisco Javier Castillo Cerna - 21562
+ * Diego Estuardo Lemus Lopez - 21469
+ * Andrés Estuardo Montoya - 21552
+ * 
+ * @realización: 14 - 28 de mayo 2021
+ *
  */
 
 public class Pez extends Actor

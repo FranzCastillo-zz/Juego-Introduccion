@@ -1,11 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class contador here.
+ * Juego Fish Tales.
+ *
+ * @version: 2.0
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @autores:
+ * José Pablo Kiesling Lange - 21581
+ * Fernanda Esquivel de Leon - 21542
+ * Francisco Javier Castillo Cerna - 21562
+ * Diego Estuardo Lemus Lopez - 21469
+ * Andrés Estuardo Montoya - 21552
+ * 
+ * @realización: 14 - 28 de mayo 2021
+ *
  */
+
 public class contador extends Actor
 {
     private int value = 0;
