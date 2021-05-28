@@ -1,25 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ferrari here.
+ * Obstáculo: Basura. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
  */
 public class Basura extends Actor
 {
+    
     private int velocidad;
     
     public Basura(int v){
         velocidad = v;
     }
     /**
-     * Act - do whatever the ferrari wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - Acciones que realiza el obstáculo Basura, se llama cuando el juego inicia.
      */
     public void act() 
     {
-        // Add your action code here.
+        //Aparición y colisión.
         setLocation(getX(), getY() + velocidad);
         if( getY() >= getWorld().getHeight() - 1 ){
             MyWorld juego = (MyWorld) getWorld();

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=MyWorld
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Juego\ Fish\ Tales.\r\n\r\n\ @version\:\ 2.0\r\n\ \r\n\ @autores\:\r\n\ Jos\u00E9\ Pablo\ Kiesling\ Lange\ -\ 21581\r\n\ Fernanda\ Esquivel\ de\ Leon\ -\ 21542\r\n\ Francisco\ Javier\ Castillo\ Cerna\ -\ 21562\r\n\ Diego\ Estuardo\ Lemus\ Lopez\ -\ 21469\r\n\ Andr\u00E9s\ Estuardo\ Montoya\ -\ 21552\r\n\ \r\n\ @realizaci\u00F3n\:\ 14\ -\ 28\ de\ mayo\ 2021\r\n\r\n
 comment1.params=
 comment1.target=MyWorld()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\r\n\ \r\n

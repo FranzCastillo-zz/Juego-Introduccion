@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Basura
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ ferrari\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Obst\u00E1culo\:\ Basura.\ \r\n\ \r\n
 comment1.params=v
 comment1.target=Basura(int)
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ ferrari\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.text=\r\n\ Act\ -\ Acciones\ que\ realiza\ el\ obst\u00E1culo\ Basura,\ se\ llama\ cuando\ el\ juego\ inicia.\r\n
 numComments=3

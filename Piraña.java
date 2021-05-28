@@ -1,10 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ferrari here.
+ * Rival: Piraña.
  * 
- * @author (your name) 
- * @version (a version number or a date)
  */
 public class Piraña extends Actor
 {
@@ -14,12 +12,11 @@ public class Piraña extends Actor
         velocidad = v;
     }
     /**
-     * Act - do whatever the ferrari wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - Acciones que realiza el rival Piraña, se llama cuando a partir del nivel 4.
      */
     public void act() 
     {
-        // Add your action code here.
+        //Aparición y colisión.
         setLocation(getX(), getY() + velocidad);
         if( getY() >= getWorld().getHeight() - 1 ){
             MyWorld juego = (MyWorld) getWorld();

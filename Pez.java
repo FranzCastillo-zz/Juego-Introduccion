@@ -1,28 +1,29 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class mclaren here.
+ * Protagonista: Pez.
  * 
- * @author (your name) 
- * @version (a version number or a date)
  */
 
 public class Pez extends Actor
 {
+    //Declaración de variables
     private int velocidad;
     boolean bandera=false;
     GreenfootSound deathsound = new GreenfootSound("dead.wav");
+    
+    //Velocidad del Pez
     public Pez(int v){
         velocidad = v;
     }
     
+    
     /**
-     * Act - do whatever the mclaren wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - Acciones que realiza el pez, se llama cuando el juego inicia.
      */
     public void act() 
     {
-        // Add your action code here.
+        //Movimientos: arriba, abajo, derecha, izquierda.
         if(Greenfoot.isKeyDown("right")){
             if(getX() < 350)
                 setLocation(getX() + velocidad, getY());
@@ -45,12 +46,14 @@ public class Pez extends Actor
     
     public void checkCollision(){
         try{
-            
+   
         Actor collided = getOneIntersectingObject(CoralAmarillo.class);
         Actor collided2 = getOneIntersectingObject(CoralMorado.class);
         Actor collided3 = getOneIntersectingObject(CoralRosa.class);
         Actor collided4 = getOneIntersectingObject(Piraña.class);
         Actor collided5 = getOneIntersectingObject(Basura.class);
+        
+        //En caso de colisión con Pez
         if (collided != null)
         {
           getWorld().removeObject(collided);
@@ -86,6 +89,7 @@ public class Pez extends Actor
     }
     }
     
+    //Aumento de velocidad de Pez
     public void aumenta_velocidad(){
         velocidad++;
     }

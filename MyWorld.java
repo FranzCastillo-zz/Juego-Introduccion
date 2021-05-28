@@ -1,14 +1,25 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * Juego Fish Tales.
+ *
+ * @version: 2.0
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @autores:
+ * José Pablo Kiesling Lange - 21581
+ * Fernanda Esquivel de Leon - 21542
+ * Francisco Javier Castillo Cerna - 21562
+ * Diego Estuardo Lemus Lopez - 21469
+ * Andrés Estuardo Montoya - 21552
+ * 
+ * @realización: 14 - 28 de mayo 2021
+ *
  */
 
+//Clase MyWorld
 public class MyWorld extends World
 {
+    //Declaración de variables
     private contador score;
     private contador level;
     private int nivelcont;
@@ -17,6 +28,7 @@ public class MyWorld extends World
     private int num_adelantamientos_nivel;
     private Pez pez;
     private int num_corales;
+    //Música de fondo
     public GreenfootSound backgroundMusic1 = new GreenfootSound("levels.wav");
     
     /**
@@ -25,19 +37,21 @@ public class MyWorld extends World
      */
     public MyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(400, 600, 1);
+       // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+       super(400, 600, 1);
         
        num_adelantamientos = 0;
        num_adelantamientos_nivel = 4;
        velocidad_pez = 2;
        
+       //Contador de niveles y puntuación
        score = new contador("Score: " );
        level = new contador("Level: " );
        level.add(1);
        nivelcont=1;
        pez = new Pez(velocidad_pez);
        
+       //Se añade al personaje, niveles y puntuación
        addObject(pez, 200, 500);
        addObject(level, 90, 60);
        addObject(score, 90, 30);
@@ -51,6 +65,7 @@ public class MyWorld extends World
     }
     
     public int getRandomNumber(int start,int end){
+       //Obtener número random
        int normal = Greenfoot.getRandomNumber(end-start+1);
        return normal+start;
     }
@@ -68,10 +83,12 @@ public class MyWorld extends World
     }
     
     public void aumentar_dificultad(){
+        //Se aumenta dificultad conforme se superan a los rivales
         if(num_adelantamientos == num_adelantamientos_nivel){
             num_adelantamientos = 0;
             num_adelantamientos_nivel = num_adelantamientos_nivel + 2;
             velocidad_pez++;
+            //Aumenta el nivel
             level.add(1);
             nivelcont++;
             pez.aumenta_velocidad();
@@ -79,7 +96,7 @@ public class MyWorld extends World
     }
    
     public void aniadir_rivales(){
-        
+        //Se añaden los rivales
         if(num_corales == 0){
             if(nivelcont<=4)
             {
